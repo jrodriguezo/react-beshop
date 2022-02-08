@@ -3,7 +3,12 @@ import './styles.css'
 function index({id, brand, model, price, imgUrl}) {
     return (
         <div className="product">
-              <img alt={id} src={imgUrl}/>
+            <img className="huerotate" alt={id} src={imgUrl}/>
+            <div className="text-block">
+                Brand: {brand} <br />
+                Model: {model} <br />
+                Price: {price} <br />
+            </div>
         </div>
       )
 }
