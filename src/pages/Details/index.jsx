@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react"
 import getProductById from "../../services/getProductById"
 import Selector from "../../components/Selector/index"
-import useCart from "../../hooks/useCart"
+import userContext from "../../hooks/userContext"
 import './styles.css'
 import postCart from "../../services/postCart"
 
 function Details({params}) {
     const { id } = params
-    const cart = useCart()
+    const user = userContext()
     const [product, setproduct] = useState([])
 
     useEffect(function () {
@@ -21,8 +21,8 @@ function Details({params}) {
         e.preventDefault();
         postCart()
             .then((newCount) => {
-                console.log(cart.count)
-                cart.count += newCount
+                console.log(user.count)
+                user.count += newCount
             })
     }
     

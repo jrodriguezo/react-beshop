@@ -1,5 +1,5 @@
 import {Route} from 'wouter'
-import CartContext from './context/CartContex'
+import UserContext from './context/UserContex'
 import Home from './pages/Home/index'
 import Details from './pages/Details/index'
 import Header from './components/Header/index'
@@ -7,12 +7,12 @@ import './App.css';
 
 function App() {
 
-  const cartData = {
+  const userData = {
       count: 0
   }
 
   return (
-    <CartContext.Provider value={cartData}>
+    <UserContext.Provider value={userData}>
       <div className="App">
         <Header />
         <section className="App-content">
@@ -20,7 +20,7 @@ function App() {
           <Route path="/product/:id" component={Details} />
         </section>
       </div>
-    </CartContext.Provider>
+    </UserContext.Provider>
   );
 }
 

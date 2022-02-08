@@ -19,3 +19,11 @@
 .header .link:hover {
     color: #fff;
 }
+
+.shopping {
+    float: right;
+}
+
+.shopping span {
+    font-size: xx-large;
+}

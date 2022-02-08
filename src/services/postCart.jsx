@@ -1,5 +1,3 @@
-import useCart from "../hooks/useCart"
-
 const PATH_GET_CART = '/api/cart'
 
 function postCart() {
