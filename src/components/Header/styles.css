@@ -1,0 +1,21 @@
+.header {
+    overflow: hidden;
+    background-color: rgb(255, 182, 45);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.header .link {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: x-large;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.header .link:hover {
+    color: #282c34;
+}
