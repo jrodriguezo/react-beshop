@@ -1,12 +1,23 @@
+import { useState, useEffect } from 'react'
+import ListOfProducts from '../../components/ListOfProducts/index'
+import getProducts from '../../services/getProducts'
+import './styles.css'
 
-import Header from '../../components/Header/index'
+function SearchProducts() {
+    const [products, setproducts] = useState([])
 
-function index() {
-  return (
-        <div>
-            Home
-        </div>
+    useEffect(function () {
+    getProducts()
+        .then(products => {
+            setproducts(products)
+        })
+    }, [])
+
+    return (
+    <div className='container'>
+        <ListOfProducts products={products} />
+    </div>
     )
 }
 
-export default index;
+export default SearchProducts;
