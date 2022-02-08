@@ -14,9 +14,9 @@ function SearchProducts() {
     }, [])
 
     return (
-    <div className='container'>
-        <ListOfProducts products={products} />
-    </div>
+            <div className='container'>
+                <ListOfProducts products={products} />
+            </div>
     )
 }
 

@@ -1,0 +1,44 @@
+.detail{
+    width: 70%;
+    justify-content: center;
+}
+
+.detail img {
+    float: left;
+    width:  360px;
+    height: 600px;
+    object-fit: cover;
+    box-shadow: 5px 5px rgb(255, 182, 45);
+}
+
+.detail .column-right {
+    border-left: 1px solid rgb(255, 182, 45);
+    border-top: 1px solid rgb(255, 182, 45);
+    padding: 100px;
+    margin: 0;
+    margin-left: 10%;
+    list-style-type: none;
+    font-size: x-large;
+    float: left;
+}
+
+.column-right{
+    text-align: right;
+}
+
+select {
+    height: 50px;
+    width: 200px;
+    font-size: large;
+}
+
+button {
+    height: 50px;
+    font-size: large;
+    margin-top: 20px;
+    width: 100px;
+}
+
+form {
+    margin: 100px;
+}

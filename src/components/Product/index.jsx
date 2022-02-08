@@ -1,16 +1,19 @@
+
+import { Link } from 'wouter';
 import './styles.css'
 
-function index({id, brand, model, price, imgUrl}) {
+function Product({id, brand, model, price, imgUrl}) {
+    
     return (
-        <div className="product">
-            <img className="huerotate" alt={id} src={imgUrl}/>
+        <Link className="product" to={`/product/${id}`} >
+            <img alt={id} src={imgUrl} />
             <div className="text-block">
                 Brand: {brand} <br />
                 Model: {model} <br />
                 Price: {price} <br />
             </div>
-        </div>
+        </Link>
       )
 }
 
-export default index;
+export default Product;

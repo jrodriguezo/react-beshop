@@ -1,4 +1,9 @@
-.container {
+p {
+    margin-top: 10%;
+    font-size: large;
+}
+
+.container{
     columns: 4 auto;
     margin: 5%;
 }
