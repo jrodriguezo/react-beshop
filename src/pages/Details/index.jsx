@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react"
 import getProductById from "../../services/getProductById"
 import Selector from "../../components/Selector/index"
+import useCart from "../../hooks/useCart"
 import './styles.css'
+import postCart from "../../services/postCart"
 
 function Details({params}) {
     const { id } = params
-
+    const cart = useCart()
     const [product, setproduct] = useState([])
 
     useEffect(function () {
@@ -15,6 +17,14 @@ function Details({params}) {
         })
     }, [id])
 
+    const handleChange = (e) => {
+        e.preventDefault();
+        postCart()
+            .then((newCount) => {
+                console.log(cart.count)
+                cart.count += newCount
+            })
+    }
     
     return (
         <div className="detail">
@@ -33,9 +43,13 @@ function Details({params}) {
                     <li>{product.weight}</li>
                 </ul>
                 <form>
-                    <Selector selectorName={"Almacenamiento"} values={product.internalMemory} />
-                    <Selector selectorName={"Colores"} values={product.colors} />
-                    <button>Buy</button>
+                    {/* 
+                        <div>
+                            <Selector selectorName={"Almacenamiento"} values={product.internalMemory} />
+                            <Selector selectorName={"Colores"} values={product.colors} />
+                        </div>
+                        */}
+                    <button onClick={handleChange}>Buy</button>
                 </form>
             </div>
 
