@@ -8,7 +8,6 @@ function getProductsById({id}) {
         .then(res => res.json())
         .then(data => {
                 const product = data
-                console.log(product)
                 return product
         })
     )

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import getProductById from "../../services/getProductById"
+import Selector from "../../components/Selector/index"
 import './styles.css'
 
 function Details({params}) {
@@ -32,24 +33,8 @@ function Details({params}) {
                     <li>{product.weight}</li>
                 </ul>
                 <form>
-                    <div>
-                        Almacenamiento &nbsp;
-                        <select>
-                            <option value="grapefruit">Grapefruit</option>
-                            <option value="lime">Lime</option>
-                            <option value="coconut">Coconut</option>
-                            <option value="mango">Mango</option>
-                        </select>
-                    </div>
-                    <div>
-                        Color &nbsp;
-                        <select>
-                            <option value="grapefruit">Grapefruit</option>
-                            <option value="lime">Lime</option>
-                            <option value="coconut">Coconut</option>
-                            <option value="mango">Mango</option>
-                        </select>
-                    </div>
+                    <Selector selectorName={"Almacenamiento"} values={product.internalMemory} />
+                    <Selector selectorName={"Colores"} values={product.colors} />
                     <button>Buy</button>
                 </form>
             </div>
