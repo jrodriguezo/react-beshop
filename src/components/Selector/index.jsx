@@ -4,7 +4,7 @@ import { UserContext } from '../../context/UserContext';
 
 function Selector({selectorName, values, type}) {
 
-    const {storageValue, colorValue, setStorageValue, setColorValue} = useContext(UserContext)
+    const {setStorageValue, setColorValue} = useContext(UserContext)
 
     useEffect(function(){
         selectorName === 'Storage' ? setStorageValue(values[0]) : setColorValue(values[0])
