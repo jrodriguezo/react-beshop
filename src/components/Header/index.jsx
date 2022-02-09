@@ -1,6 +1,7 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext"
 import { Link } from "wouter";
+import lscache from "lscache";
 import { FaShoppingCart } from "react-icons/fa";
 
 import './styles.css';
@@ -8,7 +9,7 @@ import './styles.css';
 function Header() {
   const {counter} = useContext(UserContext)
 
-  const counterToUse = counter || localStorage.getItem('lastCounter')
+  const counterToUse = counter || lscache.get('lastCounter')
 
   return ( 
     <div className="header">

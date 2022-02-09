@@ -3,6 +3,8 @@ const PATH_GET_CART = '/api/cart'
 function postCart(id, colorCode, storageCode) {
     const API_URL = `https://front-test-api.herokuapp.com${PATH_GET_CART}`
 
+    console.log(id, colorCode, storageCode)
+
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
