@@ -1,8 +1,47 @@
-# Getting Started with Create React App
+# beShop
+### Application to buy mobiles
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Home page where it shows the products
 
-## Available Scripts
+![image](https://user-images.githubusercontent.com/36509669/153305083-63a3f664-3842-46e0-980d-d83f88c23867.png)
+
+- Additional description for each product. Also, it has a form to buy that it is added to cart and includes persistence in client side during 60 mins.
+
+![image](https://user-images.githubusercontent.com/36509669/153305131-ea202521-d8ae-4fb3-83ad-d6a576fa8ba3.png)
+
+- Filter input by brand or model
+
+![image](https://user-images.githubusercontent.com/36509669/153305228-0586709e-dcdb-4a64-ac8f-42a02b4a8540.png)
+
+### About the code
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Manage of the routes through 'wouter'
+- Manage of persistence with 'lscache'
+- Includes 'react-icons' (and 'react-spinners' but not used)
+- Styles with only CSS. It could be an aspect to improve, maybe with Tailwind CSS & Daisy UI.
+- Different components coded in JSX with different hooks (useState, useEffect, useContext)
+- Use of three API's (3 services uniques):
+
+GET products
+```JS
+https://front-test-api.herokuapp.com/api/product
+```
+GET product by id
+```JS
+https://front-test-api.herokuapp.com/api/product/:id
+```
+POST cart
+```JS
+https://front-test-api.herokuapp.com/api/cart
+```
+
+### How can I use this project ?
+- It was tested on W10 and Google Chrome
+- It requires [NodeJS](https://nodejs.org/es/)
+
+Below are several ways to test it:
+
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -10,9 +49,6 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm test`
 
@@ -27,44 +63,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
