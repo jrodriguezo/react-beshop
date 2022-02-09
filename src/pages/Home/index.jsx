@@ -9,7 +9,7 @@ function SearchProducts() {
     const [filter, setFilter] = useState('');
     const [isLoading, setIsLoading] = useState(true)
 
-    
+    /* GET api for all products */
     useEffect(function () {
     getProducts()
         .then(products => {
@@ -19,8 +19,7 @@ function SearchProducts() {
         })
     }, [isLoading])
 
-    if(isLoading) return <div>Loading...</div>
-
+    /* Filter input by brand or model */
     const handleChange = (e) => {
         const keyword = e.target.value.toUpperCase()
 
@@ -34,6 +33,8 @@ function SearchProducts() {
         }
         setFilter(keyword)
     }
+
+    if(isLoading) return <div>Loading...</div>
 
     return (
         <div className='home'>

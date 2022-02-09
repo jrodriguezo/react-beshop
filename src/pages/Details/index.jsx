@@ -13,6 +13,7 @@ function Details({params}) {
     const [isLoading, setIsLoading] = useState(true)
     const [product, setProduct] = useState([])
 
+    /* GET specific product by id */
     useEffect(function () {
     getProductById({id})
         .then(productSelected => {
@@ -21,17 +22,18 @@ function Details({params}) {
         })
     }, [id])
 
-    if(isLoading) return <div>Loading...</div>
-
+    /* POST api */
     const handleChange = (e) => {
         e.preventDefault();
         postCart(id, colorValue, storageValue)
-            .then((newCount) => {
-                setCounter(counter + newCount)
-                lscache.set('lastCounter', counter, 60) // Storing data in client during 60 mins
-            })
-        }
-
+        .then((newCount) => {
+            setCounter(counter + newCount)
+            lscache.set('lastCounter', counter, 60) // Storing data in client during 60 mins
+        })
+    }
+    
+    if(isLoading) return <div>Loading...</div>
+    
     return (
         <div className="detail">
             <img src={product.imgUrl} alt={id} />
