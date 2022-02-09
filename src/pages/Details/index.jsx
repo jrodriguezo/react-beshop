@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
+import { UserContext } from "../../context/UserContext"
 import getProductById from "../../services/getProductById"
 import Selector from "../../components/Selector/index"
-import userContext from "../../hooks/userContext"
 import './styles.css'
 import postCart from "../../services/postCart"
 
 function Details({params}) {
     const { id } = params
-    const user = userContext()
+    const {counter, setCounter} = useContext(UserContext)
     const [product, setproduct] = useState([])
 
     useEffect(function () {
@@ -21,10 +21,9 @@ function Details({params}) {
         e.preventDefault();
         postCart()
             .then((newCount) => {
-                console.log(user.count)
-                user.count += newCount
+                setCounter(counter + newCount)
             })
-    }
+        }
     
     return (
         <div className="detail">
