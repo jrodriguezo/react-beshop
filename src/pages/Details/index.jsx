@@ -7,7 +7,7 @@ import postCart from "../../services/postCart"
 
 function Details({params}) {
     const { id } = params
-    const {counter, setCounter} = useContext(UserContext)
+    const {storageValue, colorValue, counter, setCounter} = useContext(UserContext)
     const [isLoading, setIsLoading] = useState(true)
     const [product, setproduct] = useState([])
 
@@ -21,13 +21,15 @@ function Details({params}) {
 
     if(isLoading) return <div>Cargando...</div>
 
+ 
+
     const handleChange = (e) => {
         e.preventDefault();
-        console.log(e)
-        postCart()
+        postCart(id, colorValue, storageValue)
             .then((newCount) => {
                 setCounter(counter + newCount)
             })
+
         }
 
     return (
