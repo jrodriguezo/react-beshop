@@ -38,10 +38,12 @@ function SearchProducts() {
 
     return (
         <div className='home'>
+            Filter &nbsp;
             <input id="filter"
                 name="filter"
                 type="text"
                 value={filter}
+                placeholder="Search item"
                 onChange={handleChange}
             />
             <div className='container'>
