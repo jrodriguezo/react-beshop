@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../../context/UserContext';
 
-function index({selectorName, values}) {
-    console.log(values)
+function Selector({selectorName, values, type}) {
+
+    const {storageValue, colorValue, setStorageValue, setColorValue} = useContext(UserContext)
+
+    useEffect(function(){
+        selectorName === 'Storage' ? setStorageValue(values[0]) : setColorValue(values[0])
+    }, [type])
+
+    const handleChange = (e) => {
+        e.preventDefault();
+        selectorName === 'Storage' ? setStorageValue(e.target.value) : setColorValue(e.target.value)
+    }
+
   return (                    
     <div>
     {selectorName} &nbsp;
-    <select>
+    <select onChange={handleChange}>
         {values.map((val,idx) =>
             <option key={idx} value={val}>{val}</option>
         )};
@@ -13,4 +26,4 @@ function index({selectorName, values}) {
 </div>)
 }
 
-export default index;
+export default Selector;

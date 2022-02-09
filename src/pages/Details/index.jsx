@@ -8,23 +8,28 @@ import postCart from "../../services/postCart"
 function Details({params}) {
     const { id } = params
     const {counter, setCounter} = useContext(UserContext)
+    const [isLoading, setIsLoading] = useState(true)
     const [product, setproduct] = useState([])
 
     useEffect(function () {
     getProductById({id})
         .then(productSelected => {
             setproduct(productSelected)
+            setIsLoading(false)
         })
     }, [id])
 
+    if(isLoading) return <div>Cargando...</div>
+
     const handleChange = (e) => {
         e.preventDefault();
+        console.log(e)
         postCart()
             .then((newCount) => {
                 setCounter(counter + newCount)
             })
         }
-    
+
     return (
         <div className="detail">
             <img src={product.imgUrl} alt={id} />
@@ -41,14 +46,12 @@ function Details({params}) {
                     <li>{product.dimentions}</li>
                     <li>{product.weight}</li>
                 </ul>
-                <form>
-                    {/* 
+                <form onSubmit={handleChange}>
                         <div>
-                            <Selector selectorName={"Almacenamiento"} values={product.internalMemory} />
-                            <Selector selectorName={"Colores"} values={product.colors} />
-                        </div>
-                        */}
-                    <button onClick={handleChange}>Buy</button>
+                            <Selector selectorName={'Storage'} values={product.internalMemory} type={'storage'} />
+                            <Selector selectorName={'Colors'} values={product.colors}  type={'color'}/>
+                        </div>  
+                    <button>Buy</button>
                 </form>
             </div>
 
