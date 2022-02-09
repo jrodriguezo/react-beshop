@@ -12,10 +12,11 @@
     position: absolute;
     font-size: large;
     bottom: 30px;
-    right: 100px;
+    margin-left: 50px;
     color: white;
     letter-spacing: 0.1em;
     cursor: pointer;
+    text-align: left;
 }
 
 
