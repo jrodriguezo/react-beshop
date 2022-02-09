@@ -38,30 +38,31 @@ https://front-test-api.herokuapp.com/api/cart
 ### How can I use this project ?
 - It was tested on W10 and Google Chrome
 - It requires [NodeJS](https://nodejs.org/es/)
+- Git bash
 
-Below are several ways to test it:
+For testing...
 
-### Available Scripts
+First of all, you should clone this repo:
+```
+ git clone https://github.com/jrodriguezo/react-beshop
+```
+Then, go to the project directory:
+```
+ cd react-beshop
+```
+Then, you should install dependencies from package-json
+```
+npm install
+```
+Finally, run the following script
+```
+npm start
+```
 
-In the project directory, you can run:
+This runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser. Enjoy! :smiley:	
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_Other option would be using static files with `npm run build`_
 
 ## Contributor
 
