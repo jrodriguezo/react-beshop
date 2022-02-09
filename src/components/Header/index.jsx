@@ -8,12 +8,14 @@ import './styles.css';
 function Header() {
   const {counter} = useContext(UserContext)
 
+  const counterToUse = counter || localStorage.getItem('lastCounter')
+
   return ( 
     <div className="header">
         <Link className="link" to="/">beShop</Link>
         <div className="shopping">
             <FaShoppingCart size={50} />
-            <span>{counter}</span>
+            <span>{counterToUse}</span>
         </div>
     </div>
   )

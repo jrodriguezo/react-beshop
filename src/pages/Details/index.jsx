@@ -28,6 +28,7 @@ function Details({params}) {
         postCart(id, colorValue, storageValue)
             .then((newCount) => {
                 setCounter(counter + newCount)
+                localStorage.setItem('lastCounter',counter + newCount)
             })
 
         }
