@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
 
-function Selector({selectorName, values, type}) {
+function Selector({selectorName, values}) {
 
     const {setStorageValue, setColorValue} = useContext(UserContext)
 
     useEffect(function(){
         selectorName === 'Storage' ? setStorageValue(values[0]) : setColorValue(values[0])
-    }, [type])
+    }, [selectorName])
 
     const handleChange = (e) => {
         e.preventDefault();

@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { UserContext } from "../../context/UserContext"
 import { Link } from "wouter";
 import lscache from "lscache";
@@ -15,7 +15,7 @@ function Header() {
     <div className="header">
         <Link className="link" to="/">beShop</Link>
         <div className="shopping">
-            <FaShoppingCart size={50} />
+            <FaShoppingCart size={30} />
             <span>{counterToUse}</span>
         </div>
     </div>

@@ -1,25 +1,22 @@
 .detail{
-    width: 70%;
-    justify-content: center;
+    width: 100%;
+    text-align: center;
 }
 
 .detail img {
-    float: left;
     width:  360px;
     height: 600px;
-    object-fit: cover;
     box-shadow: 5px 5px rgb(255, 182, 45);
 }
 
 .detail .column-right {
     border-left: 1px solid rgb(255, 182, 45);
     border-top: 1px solid rgb(255, 182, 45);
-    padding: 100px;
+    padding-right: 500px;
     margin: 0;
-    margin-left: 10%;
     list-style-type: none;
     font-size: x-large;
-    float: left;
+    float: right;
 }
 
 .column-right{
@@ -39,6 +36,3 @@ button {
     width: 100px;
 }
 
-form {
-    margin: 100px;
-}

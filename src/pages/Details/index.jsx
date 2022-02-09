@@ -20,7 +20,7 @@ function Details({params}) {
         })
     }, [id])
 
-    if(isLoading) return <div>Cargando...</div>
+    if(isLoading) return <div>Loading...</div>
 
  
 
@@ -50,10 +50,10 @@ function Details({params}) {
                     <li>{product.weight}</li>
                 </ul>
                 <form>
-                        <div>
-                            <Selector selectorName={'Storage'} values={product.internalMemory} type={'storage'} />
-                            <Selector selectorName={'Colors'} values={product.colors}  type={'color'}/>
-                        </div>  
+                    <div>
+                        <Selector selectorName={'Storage'} values={product.internalMemory} />
+                        <Selector selectorName={'Colors'} values={product.colors} />
+                    </div>  
                     <button onClick={handleChange}>Buy</button>
                 </form>
             </div>
