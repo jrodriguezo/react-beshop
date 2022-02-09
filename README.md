@@ -20,7 +20,7 @@
 - Includes 'react-icons' (and 'react-spinners' but not used)
 - Styles with only CSS. It could be an aspect to improve, maybe with Tailwind CSS & Daisy UI.
 - Different components coded in JSX with different hooks (useState, useEffect, useContext)
-- Use of three API's (3 services uniques):
+- Use of three API's (3 services implemented):
 
 GET products
 ```JS
@@ -62,7 +62,7 @@ npm start
 This runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser. Enjoy! :smiley:	
 
-_Other option would be using static files with `npm run build`_
+_Another option would be using static files with `npm run build`_
 
 ## Contributor
 
