@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
 import ListOfProducts from '../../components/ListOfProducts/index'
-import Product from '../../components/Product'
 import getProducts from '../../services/getProducts'
 import './styles.css'
 
 function SearchProducts() {
     const [products, setProducts] = useState([])
-    const [PRODUCT, setPRODUCT] = useState([])
+    const [allProducts, setAllProducts] = useState([])
     const [filter, setFilter] = useState('');
     const [isLoading, setIsLoading] = useState(true)
 
@@ -15,7 +14,7 @@ function SearchProducts() {
     getProducts()
         .then(products => {
             setProducts(products)
-            setPRODUCT(products)
+            setAllProducts(products)
             setIsLoading(false)
         })
     }, [isLoading])
@@ -26,12 +25,12 @@ function SearchProducts() {
         const keyword = e.target.value.toUpperCase()
 
         if(keyword !== ''){
-            const results = PRODUCT.filter((item)=> {
+            const results = allProducts.filter((item)=> {
                 return item.brand.toUpperCase().includes(keyword) || item.model.toUpperCase().includes(keyword)
             })
             setProducts(results)
         }else {
-            setProducts(PRODUCT)
+            setProducts(allProducts)
         }
         setFilter(keyword)
     }

@@ -9,6 +9,11 @@
     box-shadow: 5px 5px rgb(255, 182, 45);
 }
 
+.detail ul {
+    margin: 50px;
+    text-align: left;
+}
+
 .detail .column-right {
     border-left: 1px solid rgb(255, 182, 45);
     border-top: 1px solid rgb(255, 182, 45);
