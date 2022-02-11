@@ -26,9 +26,9 @@ function Details({params}) {
     const handleChange = (e) => {
         e.preventDefault();
         postCart(id, colorValue, storageValue)
-        .then((newCount) => {
-            setCounter(counter + newCount)
-            lscache.set('lastCounter', counter, 60) // Storing data in client during 60 mins
+        .then((clicked) => {
+            setCounter(counter + clicked)
+            lscache.set('lastCounter', counter + clicked, 60) // Storing data in client during 60 mins
         })
     }
     
