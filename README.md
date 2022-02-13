@@ -3,15 +3,15 @@
 
 - Home page where it shows the products
 
-![image](https://user-images.githubusercontent.com/36509669/153305083-63a3f664-3842-46e0-980d-d83f88c23867.png)
+![image](https://user-images.githubusercontent.com/36509669/153758671-0b02e798-8aa7-49b5-8495-c9d354a1b8ea.png)
 
 - Additional description for each product. Also, it has a form to buy that it is added to cart and includes persistence in client side during 60 mins.
 
-![image](https://user-images.githubusercontent.com/36509669/153305131-ea202521-d8ae-4fb3-83ad-d6a576fa8ba3.png)
+![image](https://user-images.githubusercontent.com/36509669/153758703-5e309a4e-699e-49e9-84fe-91e85081f620.png)
 
 - Filter input by brand or model
 
-![image](https://user-images.githubusercontent.com/36509669/153305228-0586709e-dcdb-4a64-ac8f-42a02b4a8540.png)
+![image](https://user-images.githubusercontent.com/36509669/153758765-10c44733-02ce-4cfb-8f17-f6cb2e3bd5a3.png)
 
 ### About the code
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
