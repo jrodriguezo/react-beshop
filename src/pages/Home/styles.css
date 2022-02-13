@@ -4,9 +4,11 @@ p {
 }
 
 input {
+    float: right;
+    justify-content: right;
+    margin-right: 5%;
     width: 300px;
     height: 35px;
-    margin-right: 100px;
 }
 
 .home {
@@ -15,6 +17,7 @@ input {
 }
 
 .container{
-    columns: 4 auto;
+    display: flex;
+    flex-wrap: wrap;
     margin: 5%;
 }

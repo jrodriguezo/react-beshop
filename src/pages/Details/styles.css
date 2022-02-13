@@ -1,6 +1,8 @@
 .detail{
-    width: 100%;
-    text-align: center;
+    display: flex;  
+    flex-direction: row;
+    justify-content: center;
+    padding: 10%;
 }
 
 .detail img {
@@ -17,8 +19,8 @@
 .detail .column-right {
     border-left: 1px solid rgb(255, 182, 45);
     border-top: 1px solid rgb(255, 182, 45);
-    padding-right: 500px;
     margin: 0;
+    margin-left: 5%;
     list-style-type: none;
     font-size: x-large;
     float: right;
