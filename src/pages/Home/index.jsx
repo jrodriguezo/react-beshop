@@ -21,11 +21,11 @@ function SearchProducts() {
 
     /* Filter input by brand or model */
     const handleChange = (e) => {
-        const keyword = e.target.value.toUpperCase()
+        const keyword = e.target.value
 
         if(keyword !== ''){
             const results = allProducts.filter((item)=> {
-                return item.brand.toUpperCase().includes(keyword) || item.model.toUpperCase().includes(keyword)
+                return item.brand.toUpperCase().includes(keyword.toUpperCase()) || item.model.toUpperCase().includes(keyword.toUpperCase())
             })
             setProducts(results)
         }else {
