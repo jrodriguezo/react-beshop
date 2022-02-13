@@ -11,7 +11,7 @@
 
 - Filter input by brand or model
 
-![image](https://user-images.githubusercontent.com/36509669/153758765-10c44733-02ce-4cfb-8f17-f6cb2e3bd5a3.png)
+![image](https://user-images.githubusercontent.com/36509669/153760221-a0885a6d-6870-41c2-887c-fda6e754c463.png)
 
 ### About the code
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
