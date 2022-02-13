@@ -46,6 +46,7 @@ function SearchProducts() {
                 placeholder="Search item"
                 onChange={handleChange}
             />
+            <p>{products.length === 100 ? '' : products.length + ' items found'}</p>
             <div className='container'>
                 <ListOfProducts products={products} />
             </div>

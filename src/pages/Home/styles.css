@@ -1,14 +1,13 @@
 p {
-    margin-top: 10%;
-    font-size: large;
+    font-size: small;
+    margin-right: 100px;
+    color: rgb(255, 182, 45);
 }
 
 input {
-    float: right;
-    justify-content: right;
-    margin-right: 5%;
     width: 300px;
     height: 35px;
+    margin-right: 100px;
 }
 
 .home {
